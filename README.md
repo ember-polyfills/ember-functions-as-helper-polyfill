@@ -32,7 +32,7 @@ export default class MyComponent extends Component {
 }
 ```
 ```hbs
-{{myHelper 3}}
+{{this.myHelper 3}}
 ^ prints 6
 ```
 
@@ -48,7 +48,7 @@ export default class MyComponent extends Component {
 }
 ```
 ```hbs
-{{doStuff 3 optionA=2 optionB=3}}
+{{this.doStuff 3 optionA=2 optionB=3}}
 ```
 
 
