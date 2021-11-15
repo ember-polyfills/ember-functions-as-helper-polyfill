@@ -1,3 +1,11 @@
+## [1.0.1](https://github.com/NullVoxPopuli/ember-functions-as-helper-polyfill/compare/v1.0.0...v1.0.1) (2021-11-15)
+
+
+### Bug Fixes
+
+* **readme:** specify 'this' in helper usages ([8250105](https://github.com/NullVoxPopuli/ember-functions-as-helper-polyfill/commit/8250105669ac96972147b0dec346a3f7b04bfd12))
+* remove post install script ([fc68d30](https://github.com/NullVoxPopuli/ember-functions-as-helper-polyfill/commit/fc68d301b70c9cdfe913647657103b2b49e76730)), closes [#13](https://github.com/NullVoxPopuli/ember-functions-as-helper-polyfill/issues/13)
+
 # 1.0.0 (2021-11-15)
 
 
