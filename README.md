@@ -9,8 +9,8 @@ Polyfill for [RFC: 756 | Default Helper Manager](https://github.com/emberjs/rfcs
 
 ## Compatibility
 
-* Ember.js v3.24 or above
-* Ember CLI v3.24 or above
+* Ember.js v3.25 or above
+* Ember CLI v3.25 or above
 * ember-auto-import v1 or above
 
 
