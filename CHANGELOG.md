@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/NullVoxPopuli/ember-functions-as-helper-polyfill/compare/v1.0.1...v1.0.2) (2021-11-16)
+
+
+### Bug Fixes
+
+* **deps:** update dependency ember-auto-import to v2 ([edab058](https://github.com/NullVoxPopuli/ember-functions-as-helper-polyfill/commit/edab058838525b19251f7e0a384f20959e66ad7b))
+
 ## [1.0.1](https://github.com/NullVoxPopuli/ember-functions-as-helper-polyfill/compare/v1.0.0...v1.0.1) (2021-11-15)
 
 
