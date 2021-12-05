@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/NullVoxPopuli/ember-functions-as-helper-polyfill/compare/v1.0.3...v1.0.4) (2021-12-05)
+
+
+### Bug Fixes
+
+* **deps:** update dependency ember-cli-htmlbars to ^6.0.1 ([2d2a840](https://github.com/NullVoxPopuli/ember-functions-as-helper-polyfill/commit/2d2a840b40df370095b8bd4499f95495a02db88c))
+
 ## [1.0.3](https://github.com/NullVoxPopuli/ember-functions-as-helper-polyfill/compare/v1.0.2...v1.0.3) (2021-11-16)
 
 
