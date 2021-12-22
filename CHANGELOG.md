@@ -1,3 +1,10 @@
+## [1.0.10](https://github.com/NullVoxPopuli/ember-functions-as-helper-polyfill/compare/v1.0.9...v1.0.10) (2021-12-22)
+
+
+### Bug Fixes
+
+* **deps:** update dependency ember-cli-babel to ^7.26.11 ([ec2d3d0](https://github.com/NullVoxPopuli/ember-functions-as-helper-polyfill/commit/ec2d3d06669dd96a0a162f6cc1402e7c78fc10c9))
+
 ## [1.0.9](https://github.com/NullVoxPopuli/ember-functions-as-helper-polyfill/compare/v1.0.8...v1.0.9) (2021-12-21)
 
 
