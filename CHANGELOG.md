@@ -1,3 +1,10 @@
+## [1.0.13](https://github.com/NullVoxPopuli/ember-functions-as-helper-polyfill/compare/v1.0.12...v1.0.13) (2022-01-14)
+
+
+### Bug Fixes
+
+* **deps:** update embroider monorepo to ^0.50.2 ([5a96c7c](https://github.com/NullVoxPopuli/ember-functions-as-helper-polyfill/commit/5a96c7ce73c25a86239246aea733479d09fd4330))
+
 ## [1.0.12](https://github.com/NullVoxPopuli/ember-functions-as-helper-polyfill/compare/v1.0.11...v1.0.12) (2022-01-13)
 
 
