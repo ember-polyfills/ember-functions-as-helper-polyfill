@@ -1,3 +1,10 @@
+## [1.0.15](https://github.com/NullVoxPopuli/ember-functions-as-helper-polyfill/compare/v1.0.14...v1.0.15) (2022-01-26)
+
+
+### Bug Fixes
+
+* **deps:** do not depend on unneeded packages ([442696d](https://github.com/NullVoxPopuli/ember-functions-as-helper-polyfill/commit/442696d24d29a0d1a6b5e4f90480b535ff19c666))
+
 ## [1.0.14](https://github.com/NullVoxPopuli/ember-functions-as-helper-polyfill/compare/v1.0.13...v1.0.14) (2022-01-19)
 
 
