@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/ban-types */
 // typed-ember doesn't have types for `@ember/helper` yet
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -19,35 +20,42 @@ export default {
 
 type FnArgs<Args extends Arguments = Arguments> =
   | [...Args['positional'], Args['named']]
-  | [...Args['positional'], {}];
+  | [...Args['positional']];
 
-interface FunctionHelperState<Args extends Arguments = Arguments> {
-  fn: <Return>(...args: FnArgs<Args>) => Return;
-  args: Args;
+type AnyFunction = (...args: any[]) => unknown;
+
+interface State {
+  fn: AnyFunction;
+  args: Arguments;
 }
 
-export class FunctionHelperManager<State extends FunctionHelperState> {
+export class FunctionHelperManager {
   capabilities = helperCapabilities('3.23', {
     hasValue: true,
     hasDestroyable: false,
     hasScheduledEffect: false,
   });
 
-  createHelper(fn: State['fn'], args: State['args']) {
+  createHelper(fn: AnyFunction, args: Arguments): State {
     return { fn, args };
   }
 
-  getValue({ fn, args }: State) {
-    let argsForFn: FnArgs<Arguments> = [
-      ...args.positional,
-      Object.keys(args.named).length > 0 ? args.named : {},
-    ];
+  getValue({ fn, args }: State): unknown {
+    if (Object.keys(args.named).length > 0) {
+      let argsForFn: FnArgs<Arguments> = [...args.positional, args.named];
 
-    return fn(...argsForFn);
+      return fn(...argsForFn);
+    }
+
+    return fn(...args.positional);
   }
 
-  getDebugName(fn: State['fn']) {
-    return fn.name || '(anonymous function)';
+  getDebugName(fn: AnyFunction): string {
+    if (fn.name) {
+      return `(helper function ${fn.name})`;
+    }
+
+    return '(anonymous helper function)';
   }
 }
 
