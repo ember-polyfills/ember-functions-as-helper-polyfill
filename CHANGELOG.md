@@ -1,3 +1,19 @@
+# [2.0.0](https://github.com/NullVoxPopuli/ember-functions-as-helper-polyfill/compare/v1.0.15...v2.0.0) (2022-01-30)
+
+
+### chore
+
+* sync with RFC ([343a698](https://github.com/NullVoxPopuli/ember-functions-as-helper-polyfill/commit/343a6989a840866b849723d7ca63a85e772f1018))
+
+
+### BREAKING CHANGES
+
+* copy real implementation
+this changes the behavior of the options arg to enable
+optional positional params when options are not used.
+See the RFC update for more details.
+https://github.com/emberjs/rfcs/pull/756
+
 ## [1.0.15](https://github.com/NullVoxPopuli/ember-functions-as-helper-polyfill/compare/v1.0.14...v1.0.15) (2022-01-26)
 
 
