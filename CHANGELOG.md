@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/NullVoxPopuli/ember-functions-as-helper-polyfill/compare/v2.0.0...v2.0.1) (2022-02-04)
+
+
+### Bug Fixes
+
+* **deps:** update dependency ember-cli-typescript to v5 ([38084b6](https://github.com/NullVoxPopuli/ember-functions-as-helper-polyfill/commit/38084b674bc9886baf6f7a10fec2ab5af7a6f944))
+
 # [2.0.0](https://github.com/NullVoxPopuli/ember-functions-as-helper-polyfill/compare/v1.0.15...v2.0.0) (2022-01-30)
 
 
