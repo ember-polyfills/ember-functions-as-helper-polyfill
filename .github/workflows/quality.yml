@@ -11,7 +11,7 @@ on:
 env:
   CI: true
   CACHE_PATH: '**/node_modules'
-  LIBRARY_DIR: './ember-functions-as-helper-polyfill'
+  LIBRARY_DIR: './polyfill'
   TEST_DIR: './test-app'
 
 concurrency:
