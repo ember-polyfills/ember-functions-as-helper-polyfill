@@ -11,9 +11,17 @@ on:
 
 env:
   CI: true
+  CACHE_PATH: '**/node_modules'
+  LIBRARY_DIR: './ember-functions-as-helper-polyfill'
+  TEST_DIR: './test-app'
+
+concurrency:
+   group: ci-${{ github.head_ref || github.ref }}
+   cancel-in-progress: true
 
 jobs:
   tests:
+    if: "! contains(toJSON(github.event.commits.*.message), '[skip ci]')"
     name: Base Tests
     timeout-minutes: 5
     runs-on: ubuntu-latest
@@ -31,9 +39,11 @@ jobs:
       - run: yarn install --frozen-lockfile
 
       - name: Test with ${{ matrix.node }}
-        run: yarn ember test
+        run: node_modules/.bin/ember test
+        working-directory: ${{ env.TEST_DIR }}
 
   floating-dependencies:
+    if: "! contains(toJSON(github.event.commits.*.message), '[skip ci]')"
     name: Floating Dependencies
     timeout-minutes: 5
     runs-on: ubuntu-latest
@@ -42,7 +52,6 @@ jobs:
         node:
           - "14"
           - "16"
-
     steps:
       - uses: actions/checkout@v2
       - uses: volta-cli/action@v1
@@ -52,9 +61,11 @@ jobs:
       - run: yarn install --no-lockfile
 
       - name: Test with Node ${{ matrix.node }}
-        run: yarn ember test
+        run: node_modules/.bin/ember test
+        working-directory: ${{ env.TEST_DIR }}
 
   try-scenarios:
+    if: "! contains(toJSON(github.event.commits.*.message), '[skip ci]')"
     name: "Compatibility"
     timeout-minutes: 7
     runs-on: ubuntu-latest
@@ -64,12 +75,12 @@ jobs:
       fail-fast: true
       matrix:
         ember-try-scenario:
-          - ember-3.25
-          - ember-3.28-lts
+          - ember-3.27
+          - ember-3.28
+          - ember-4.0
           - ember-release
           - ember-beta
           - ember-canary
-          - ember-could-get-used-to-this
           - embroider-safe
           - embroider-optimized
     steps:
@@ -78,26 +89,13 @@ jobs:
         with:
           node-version: 14.x
       - name: install dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install
       - name: test
-        run: node_modules/.bin/ember try:one ${{ matrix.ember-try-scenario }} --skip-cleanup
-
-  ember-cli-update:
-    if: github.event_name == 'pull_request' && github.event.pusher.name == 'renovate-bot'
-    runs-on: ubuntu-latest
-    needs: [tests, try-scenarios, floating-dependencies]
-
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          ref: ${{ github.head_ref }}
-          token: ${{ secrets.ECU_TOKEN }}
-      - uses: actions/setup-node@v2
-      - uses: kellyselden/ember-cli-update-action@v3
-        with:
-          autofix_command: yarn lint:fix
-          ignore_to: true
-
+        run: |
+          cd ${{ env.LIBRARY_DIR }}
+          yarn build
+          cd ../${{ env.TEST_DIR }}
+          yarn ember try:one ${{ matrix.ember-try-scenario }} --skip-cleanup
   publish:
     name: Release
     runs-on: ubuntu-latest
@@ -112,7 +110,8 @@ jobs:
       - run: yarn install
 
       - name: Release
-        run: yarn semantic-release
+        run: node_modules/.bin/semantic-release
+        working-directory: ${{ env.LIBRARY_DIR }}
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
