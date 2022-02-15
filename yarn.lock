@@ -2217,14 +2217,6 @@
     walk-sync "^3.0.0"
     yargs "^17.0.1"
 
-"@embroider/addon-shim@^0.50.0":
-  version "0.50.2"
-  resolved "https://registry.yarnpkg.com/@embroider/addon-shim/-/addon-shim-0.50.2.tgz#9be2ed8cee1086cef63c5baecf8dde8dcdacc24e"
-  integrity sha512-a+pFlXZPovcCNFo05HxXBW9ole43mPyFZnkhvZlLF0f1sHEn9j0sD1Ld2BM/NCERmHcYz9eXQnX1FPNLCDoGEA==
-  dependencies:
-    "@embroider/shared-internals" "^0.50.2"
-    semver "^7.3.5"
-
 "@embroider/addon-shim@^1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@embroider/addon-shim/-/addon-shim-1.2.0.tgz#ed936e5dc76a50dc041075bc37e0f910772cb6ee"
@@ -2448,19 +2440,6 @@
     resolve-package-path "^1.2.2"
     semver "^7.3.2"
     typescript-memoize "^1.0.0-alpha.3"
-
-"@embroider/shared-internals@^0.50.2":
-  version "0.50.2"
-  resolved "https://registry.yarnpkg.com/@embroider/shared-internals/-/shared-internals-0.50.2.tgz#567c5451db31a1f3edc2f64376ce5a0dcaaabacb"
-  integrity sha512-l3SKn1YdxTFBjY3ylYTLHxFY0dG2XxIsjbtZt7Mm6QyZFssWBDg3oWYwBoUpkw/ysjNJf8IcI7reXhB23WXwDw==
-  dependencies:
-    babel-import-util "^1.1.0"
-    ember-rfc176-data "^0.3.17"
-    fs-extra "^9.1.0"
-    lodash "^4.17.21"
-    resolve-package-path "^4.0.1"
-    semver "^7.3.5"
-    typescript-memoize "^1.0.1"
 
 "@embroider/shared-internals@^1.2.0":
   version "1.2.0"
@@ -7406,13 +7385,6 @@ ember-template-recast@^5.0.3:
     slash "^3.0.0"
     tmp "^0.2.1"
     workerpool "^6.1.4"
-
-ember-welcome-page@^6.0.0:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/ember-welcome-page/-/ember-welcome-page-6.1.0.tgz#0c1c2c611a197772d3a2801ad9f5b897608bd876"
-  integrity sha512-r0gFsXLbqh9xwFAFaq9IVz7IhQ9WgIwE7WszUhGoRCRZu+MwxZ+Ovrr2xlXErntqjvFXgqLdhr6iP5zvVoDTLQ==
-  dependencies:
-    "@embroider/addon-shim" "^0.50.0"
 
 emoji-regex@^8.0.0:
   version "8.0.0"
