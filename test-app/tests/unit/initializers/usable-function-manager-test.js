@@ -2,9 +2,9 @@ import Application from '@ember/application';
 import { run } from '@ember/runloop';
 import { module, test } from 'qunit';
 
-import config from 'dummy/config/environment';
-import { initialize } from 'dummy/initializers/usable-function-manager';
 import Resolver from 'ember-resolver';
+import config from 'test-app/config/environment';
+import { initialize } from 'test-app/initializers/usable-function-manager';
 
 module('Unit | Initializer | usable-function-manager', function (hooks) {
   hooks.beforeEach(function () {
