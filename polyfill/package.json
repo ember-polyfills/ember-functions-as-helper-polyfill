@@ -68,7 +68,10 @@
     "version": 2,
     "type": "addon",
     "main": "./addon-main.cjs",
-    "app-js": {}
+    "app-js": {
+      "./initializers/install-function-helper-manager.js": "./dist/_app_/initializers/install-function-helper-manager.js",
+      "./initializers/usable-function-manager.js": "./dist/_app_/initializers/usable-function-manager.js"
+    }
   },
   "engines": {
     "node": ">= 14.0.0"
