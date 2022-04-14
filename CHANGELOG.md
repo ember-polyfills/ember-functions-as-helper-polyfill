@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/NullVoxPopuli/ember-functions-as-helper-polyfill/compare/v2.0.1...v2.1.0) (2022-04-14)
+
+
+### Features
+
+* make inert when ember-source supports default helper manager ([0e98b0f](https://github.com/NullVoxPopuli/ember-functions-as-helper-polyfill/commit/0e98b0f835278e070eb62b3a5c13b6bbc2e46e9c))
+
 ## [2.0.1](https://github.com/NullVoxPopuli/ember-functions-as-helper-polyfill/compare/v2.0.0...v2.0.1) (2022-02-04)
 
 
