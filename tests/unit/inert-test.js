@@ -12,7 +12,7 @@ module('Unit | inert', function (hooks) {
     return Object.keys(window.requirejs.entries).some(e => initializers.some(name => e.includes(name)))
   }
 
-  if (macroCondition(dependencySatisfies('ember-source', '4.5.0-alpha.3'))) {
+  if (macroCondition(dependencySatisfies('ember-source', '^4.5.0-alpha.3 || ^4.5.0'))) {
 
     test('polyfill is inert', function(assert) {
       assert.strictEqual(hasPolyfill(), false, 'no polyfill');
