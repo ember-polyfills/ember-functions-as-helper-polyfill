@@ -92,7 +92,7 @@ jobs:
         with:
           ref: ${{ github.head_ref }}
           token: ${{ secrets.ECU_TOKEN }}
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v3
       - uses: kellyselden/ember-cli-update-action@v3
         with:
           autofix_command: yarn lint:fix
