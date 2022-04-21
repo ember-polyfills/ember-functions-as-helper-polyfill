@@ -24,6 +24,14 @@ module.exports = async function () {
         },
       },
       {
+        name: 'first-inert',
+        npm: {
+          devDependencies: {
+            'ember-source': '4.5.0-alpha.4',
+          },
+        },
+      },
+      {
         name: 'ember-release',
         npm: {
           devDependencies: {

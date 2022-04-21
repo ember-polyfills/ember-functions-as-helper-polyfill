@@ -10,11 +10,11 @@ module('Unit | inert', function (hooks) {
     let initializers = ['install-function-helper-manager', 'usable-function-manager'];
 
     return Object.keys(window.requirejs.entries).some((e) =>
-      initializers.some((name) => e.includes(name))
+      initializers.some((name) => e.includes(name) && !e.endsWith('-test'))
     );
   }
 
-  if (macroCondition(dependencySatisfies('ember-source', '^4.5.0-alpha.3 || ^4.5.0'))) {
+  if (macroCondition(dependencySatisfies('ember-source', '>= 4.5.0-alpha.4 || ^4.5.0'))) {
     test('polyfill is inert', function (assert) {
       assert.false(hasPolyfill(), 'no polyfill');
     });

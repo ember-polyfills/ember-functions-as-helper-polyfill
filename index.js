@@ -2,7 +2,7 @@
 
 const VersionChecker = require('ember-cli-version-checker');
 
-const MINIMUM_VERSION = '4.5.0-alpha.3';
+const MINIMUM_VERSION = '4.5.0-alpha.4';
 
 module.exports = {
   name: require('./package').name,

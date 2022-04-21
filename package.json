@@ -32,6 +32,9 @@
     "ember-cli-typescript": "^5.0.0",
     "ember-cli-version-checker": "^5.1.2"
   },
+  "peerDependencies": {
+    "ember-source": "^3.25.0 || ^4.0.0"
+  },
   "devDependencies": {
     "@commitlint/cli": "^16.2.3",
     "@commitlint/config-conventional": "^16.2.1",
@@ -86,7 +89,7 @@
     "ember-source": "4.2.0",
     "ember-source-channel-url": "^3.0.0",
     "ember-template-lint": "^4.3.0",
-    "ember-try": "^2.0.0",
+    "ember-try": "^1.0.0",
     "eslint": "^7.0.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-decorator-position": "^4.0.1",
