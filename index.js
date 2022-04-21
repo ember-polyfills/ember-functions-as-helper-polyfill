@@ -2,7 +2,7 @@
 
 const VersionChecker = require('ember-cli-version-checker');
 
-const MINIMUM_VERSION = '4.5.0-alpha.3'
+const MINIMUM_VERSION = '4.5.0-alpha.3';
 
 module.exports = {
   name: require('./package').name,
@@ -18,6 +18,7 @@ module.exports = {
   usePolyfill() {
     if (this._usePolyfill === undefined) {
       let version = new VersionChecker(this.project).for(`ember-source`);
+
       this._usePolyfill = version.lt(MINIMUM_VERSION);
     }
 

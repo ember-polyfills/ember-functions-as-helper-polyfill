@@ -1,7 +1,7 @@
 import { module, test } from 'qunit';
 import { setupTest } from 'ember-qunit';
 
-import { macroCondition, dependencySatisfies } from '@embroider/macros';
+import { dependencySatisfies, macroCondition } from '@embroider/macros';
 
 module('Unit | inert', function (hooks) {
   setupTest(hooks);
@@ -9,21 +9,18 @@ module('Unit | inert', function (hooks) {
   function hasPolyfill() {
     let initializers = ['install-function-helper-manager', 'usable-function-manager'];
 
-    return Object.keys(window.requirejs.entries).some(e => initializers.some(name => e.includes(name)))
+    return Object.keys(window.requirejs.entries).some((e) =>
+      initializers.some((name) => e.includes(name))
+    );
   }
 
   if (macroCondition(dependencySatisfies('ember-source', '^4.5.0-alpha.3 || ^4.5.0'))) {
-
-    test('polyfill is inert', function(assert) {
-      assert.strictEqual(hasPolyfill(), false, 'no polyfill');
+    test('polyfill is inert', function (assert) {
+      assert.false(hasPolyfill(), 'no polyfill');
     });
-
   } else {
-
-    test('polyfill is present', function(assert) {
-      assert.strictEqual(hasPolyfill(), true, 'has polyfill');
+    test('polyfill is present', function (assert) {
+      assert.true(hasPolyfill(), 'has polyfill');
     });
-
   }
-
 });
