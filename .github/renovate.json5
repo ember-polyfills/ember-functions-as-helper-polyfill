@@ -90,6 +90,11 @@
       "enabled": false
     },
     {
+      // ensure maximum compatibility, when possible
+      "matchDepTypes": ["dependencies"],
+      "enabled": false
+    },
+    {
       // changing engines forces other people to need to upgrade their minimum node
       // therefor engine changes are breaking changes
       "depTypeList": ["engines"],

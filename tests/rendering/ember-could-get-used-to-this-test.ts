@@ -54,9 +54,9 @@ if (moduleExists('ember-could-get-used-to-this')) {
         @tracked sourceObject = new TrackedObject();
 
         myHelper = (x: number, opts: TrackedObject) => {
-          assert.equal(x, 3);
-          assert.equal(opts.a, 0);
-          assert.equal(opts.b, 1);
+          assert.strictEqual(x, 3);
+          assert.strictEqual(opts.a, 0);
+          assert.strictEqual(opts.b, 1);
         };
       }
 
