@@ -10,7 +10,7 @@ module('Unit | inert', function (hooks) {
     let initializers = ['install-function-helper-manager', 'usable-function-manager'];
 
     return Object.keys(window.requirejs.entries).some((e) =>
-      initializers.some((name) => e.includes(name))
+      initializers.some((name) => e.includes(name) && !e.endsWith('-test'))
     );
   }
 
