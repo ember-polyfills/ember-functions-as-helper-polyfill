@@ -6,7 +6,7 @@ import { dependencySatisfies, importSync, macroCondition } from '@embroider/macr
 import config from 'dummy/config/environment';
 import Resolver from 'ember-resolver';
 
-if (macroCondition(dependencySatisfies('ember-source', '^4.5.0-alpha.4 || ^4.5.0'))) {
+if (macroCondition(dependencySatisfies('ember-source', '>= 4.5.0-alpha.4 || ^4.5.0'))) {
   console.debug('usable-function-manager test skipped');
 } else {
   const { initialize } = importSync('dummy/initializers/usable-function-manager');
