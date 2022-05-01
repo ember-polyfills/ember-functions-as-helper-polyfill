@@ -1,3 +1,10 @@
+## [2.1.1](https://github.com/NullVoxPopuli/ember-functions-as-helper-polyfill/compare/v2.1.0...v2.1.1) (2022-05-01)
+
+
+### Bug Fixes
+
+* **inert:** update when this polyfill becomes inert ([4797f5c](https://github.com/NullVoxPopuli/ember-functions-as-helper-polyfill/commit/4797f5ce205bedef0be206e2c0898897914e1438))
+
 # [2.1.0](https://github.com/NullVoxPopuli/ember-functions-as-helper-polyfill/compare/v2.0.1...v2.1.0) (2022-04-14)
 
 
