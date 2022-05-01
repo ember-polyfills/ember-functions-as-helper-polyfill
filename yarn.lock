@@ -1185,7 +1185,7 @@
     ember-cli-version-checker "^5.1.2"
     semver "^7.3.5"
 
-"@embroider/macros@^1.0.0":
+"@embroider/macros@^1.0.0", "@embroider/macros@^1.6.0":
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/@embroider/macros/-/macros-1.6.0.tgz#2b764f965c645fdcfbf05897c88195368b046ba1"
   integrity sha512-yUEXJGJGP3rjtxorxrbkdxriBFEwnmzOrNk4zK64IXKBfyRjiDZFUHV9DSTrbaYLS29Mw5yK73ZIwi8L13C4Zw==
@@ -1213,7 +1213,7 @@
     semver "^7.3.5"
     typescript-memoize "^1.0.1"
 
-"@embroider/test-setup@^1.0.0":
+"@embroider/test-setup@^1.6.0":
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/@embroider/test-setup/-/test-setup-1.6.0.tgz#91fe3d7a8daeba32de35220d25407ad1df7a0db2"
   integrity sha512-6U+NsfGL9ubADreLCnOWMCVFpoU4/DzHlbgfEH3NE+rcdF+2WbY8VP+MeqjjccoES0HvhIeUKvoIbiqkoWAbhQ==
