@@ -5,7 +5,8 @@
 
 
 Use plain functions as helpers.
-Polyfill for [RFC: 756 | Default Helper Manager](https://github.com/emberjs/rfcs/pull/756)
+Polyfill for [RFC: 756 | Default Helper Manager](https://github.com/emberjs/rfcs/pull/756).
+On Ember.js versions with native support for the feature (4.5+), this addon is inert.
 
 ## Compatibility
 
