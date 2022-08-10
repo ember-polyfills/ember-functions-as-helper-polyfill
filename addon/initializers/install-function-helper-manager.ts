@@ -3,7 +3,10 @@
 // typed-ember doesn't have types for `@ember/helper` yet
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-import { capabilities as helperCapabilities, setHelperManager } from '@ember/helper';
+import {
+  capabilities as helperCapabilities,
+  setHelperManager,
+} from '@ember/helper';
 
 import type { Arguments } from '../-private/local-glimmer-interfaces-types';
 
@@ -17,6 +20,8 @@ export function initialize(/* appInstance */) {
 export default {
   initialize,
 };
+
+type Owner = unknown;
 
 type FnArgs<Args extends Arguments = Arguments> =
   | [...Args['positional'], Args['named']]
@@ -36,6 +41,8 @@ export class FunctionHelperManager {
     hasScheduledEffect: false,
   });
 
+  owner?: Owner = undefined;
+
   createHelper(fn: AnyFunction, args: Arguments): State {
     return { fn, args };
   }
@@ -44,10 +51,10 @@ export class FunctionHelperManager {
     if (Object.keys(args.named).length > 0) {
       let argsForFn: FnArgs<Arguments> = [...args.positional, args.named];
 
-      return fn(...argsForFn);
+      return fn.apply(this.owner, argsForFn);
     }
 
-    return fn(...args.positional);
+    return fn.apply(this.owner, args.positional);
   }
 
   getDebugName(fn: AnyFunction): string {
@@ -61,4 +68,10 @@ export class FunctionHelperManager {
 
 const FUNCTIONAL_HELPER_MANAGER = new FunctionHelperManager();
 
-setHelperManager(() => FUNCTIONAL_HELPER_MANAGER, Function.prototype);
+setHelperManager(
+  (owner: Owner) =>
+    Object.create(FUNCTIONAL_HELPER_MANAGER, {
+      owner: { value: owner, writable: false, configurable: false },
+    }),
+  Function.prototype
+);

@@ -4,6 +4,16 @@ import { hbs } from 'ember-cli-htmlbars';
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 
+interface Owner {
+  lookup(
+    key: string,
+    options?: {
+      singleton?: boolean | undefined;
+      instantiate?: boolean | undefined;
+    }
+  ): unknown;
+}
+
 module('function helpers', function (hooks) {
   setupRenderingTest(hooks);
 
@@ -99,5 +109,30 @@ module('function helpers', function (hooks) {
       'myHelper: 4',
       'x is 4, and opts.a is 6',
     ]);
+  });
+
+  test('the owner is bound as `this` context', async function (assert) {
+    function lookup(
+      this: Owner,
+      identifier: string,
+      options?: object
+    ): unknown {
+      return this.lookup(identifier, options);
+    }
+
+    const testIdentifier = 'test-value:foo';
+    const testValue = 'foo';
+
+    this.owner.register(
+      testIdentifier,
+      { string: testValue },
+      { instantiate: false }
+    );
+
+    this.setProperties({ lookup, testIdentifier });
+
+    await render(hbs`{{get (this.lookup this.testIdentifier) "string"}}`);
+
+    assert.dom().hasText(testValue);
   });
 });
