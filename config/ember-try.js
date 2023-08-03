@@ -36,6 +36,8 @@ module.exports = async function () {
         npm: {
           devDependencies: {
             'ember-source': await getChannelURL('release'),
+            'ember-cli': '^5.0.0',
+            '@glint/template': '^1.0.0',
           },
         },
       },
@@ -47,6 +49,8 @@ module.exports = async function () {
           },
           devDependencies: {
             'ember-source': await getChannelURL('beta'),
+            '@glint/template': '^1.0.0',
+            'ember-cli': '^5.0.0',
             webpack: '^5.0.0',
           },
         },
@@ -59,6 +63,8 @@ module.exports = async function () {
           },
           devDependencies: {
             'ember-source': await getChannelURL('canary'),
+            '@glint/template': '^1.0.0',
+            'ember-cli': '^5.0.0',
             webpack: '^5.0.0',
           },
         },
