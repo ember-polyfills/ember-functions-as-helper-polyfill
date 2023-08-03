@@ -1,3 +1,10 @@
+## [2.1.2](https://github.com/NullVoxPopuli/ember-functions-as-helper-polyfill/compare/v2.1.1...v2.1.2) (2023-08-03)
+
+
+### Bug Fixes
+
+* widen peer range ([01697a1](https://github.com/NullVoxPopuli/ember-functions-as-helper-polyfill/commit/01697a18d64b84aee94b980e622bc63b8f78fbfa))
+
 ## [2.1.1](https://github.com/NullVoxPopuli/ember-functions-as-helper-polyfill/compare/v2.1.0...v2.1.1) (2022-05-01)
 
 
