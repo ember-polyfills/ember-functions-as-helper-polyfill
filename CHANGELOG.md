@@ -1,5 +1,22 @@
 # Changelog
 
+## Release (2025-05-06)
+
+* ember-functions-as-helper-polyfill 2.1.3 (patch)
+
+#### :bug: Bug Fix
+* `ember-functions-as-helper-polyfill`
+  * [#147](https://github.com/ember-polyfills/ember-functions-as-helper-polyfill/pull/147) fix: Remove @ember/string dependency ([@MichalBryxi](https://github.com/MichalBryxi))
+
+#### :house: Internal
+* `ember-functions-as-helper-polyfill`
+  * [#149](https://github.com/ember-polyfills/ember-functions-as-helper-polyfill/pull/149) Add release-plan ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+  * [#148](https://github.com/ember-polyfills/ember-functions-as-helper-polyfill/pull/148) Switch to pnpm ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+
+#### Committers: 2
+- Michal Bryxí ([@MichalBryxi](https://github.com/MichalBryxi))
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
 ## [2.1.2](https://github.com/NullVoxPopuli/ember-functions-as-helper-polyfill/compare/v2.1.1...v2.1.2) (2023-08-03)
 
 
