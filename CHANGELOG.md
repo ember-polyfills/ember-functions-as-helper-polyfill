@@ -1,3 +1,5 @@
+# Changelog
+
 ## [2.1.2](https://github.com/NullVoxPopuli/ember-functions-as-helper-polyfill/compare/v2.1.1...v2.1.2) (2023-08-03)
 
 
