@@ -1,6 +1,6 @@
 {
   "name": "ember-functions-as-helper-polyfill",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "description": "Implementation of RFC 756, Default Helper Manager",
   "keywords": [
     "ember-addon"
