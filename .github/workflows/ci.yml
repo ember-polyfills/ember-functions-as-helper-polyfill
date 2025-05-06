@@ -23,8 +23,8 @@ jobs:
           - "14"
           - "16"
     steps:
-      - uses: actions/checkout@v2
-      - uses: volta-cli/action@v1
+      - uses: actions/checkout@v4
+      - uses: volta-cli/action@v4
         with:
           node-version: ${{ matrix.node }}
 
@@ -44,8 +44,8 @@ jobs:
           - "16"
 
     steps:
-      - uses: actions/checkout@v2
-      - uses: volta-cli/action@v1
+      - uses: actions/checkout@v4
+      - uses: volta-cli/action@v4
         with:
           node-version: ${{ matrix.node }}
 
@@ -74,8 +74,8 @@ jobs:
           - embroider-safe
           - embroider-optimized
     steps:
-      - uses: actions/checkout@v2
-      - uses: volta-cli/action@v1
+      - uses: actions/checkout@v4
+      - uses: volta-cli/action@v4
         with:
           node-version: 14.x
       - name: install dependencies
@@ -89,7 +89,7 @@ jobs:
     needs: [tests, try-scenarios, floating-dependencies]
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           ref: ${{ github.head_ref }}
           token: ${{ secrets.ECU_TOKEN }}
@@ -106,10 +106,10 @@ jobs:
     needs: [tests, try-scenarios, floating-dependencies]
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           persist-credentials: false
-      - uses: volta-cli/action@v1
+      - uses: volta-cli/action@v4
       - run: yarn install
 
       - name: Release
