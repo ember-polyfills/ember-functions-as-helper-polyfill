@@ -60,9 +60,6 @@ jobs:
           - ember-3.25
           - ember-3.28-lts
           - first-inert
-          - ember-release
-          - ember-beta
-          - ember-canary
           - ember-could-get-used-to-this
           - embroider-safe
           - embroider-optimized
