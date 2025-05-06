@@ -120,9 +120,10 @@
       "@semantic-release/git"
     ]
   },
+  "packageManager": "pnpm@10.10.0",
   "volta": {
     "node": "14.21.3",
-    "yarn": "1.22.17"
+    "pnpm": "10.10.0"
   },
   "engines": {
     "node": ">= 14.0.0"
