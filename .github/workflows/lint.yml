@@ -20,8 +20,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-      - uses: volta-cli/action@v1
+      - uses: actions/checkout@v4
+      - uses: volta-cli/action@v4
 
       - run: yarn install --frozen-lockfile
 
@@ -36,8 +36,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-      - uses: volta-cli/action@v1
+      - uses: actions/checkout@v4
+      - uses: volta-cli/action@v4
       - uses: actions/cache@v2
         with:
           path: '**/node_modules'
@@ -56,8 +56,8 @@ jobs:
   #   runs-on: ubuntu-latest
 
   #   steps:
-  #   - uses: actions/checkout@v2
-  #   - uses: volta-cli/action@v1
+  #   - uses: actions/checkout@v4
+  #   - uses: volta-cli/action@v4
 
   #   - run: yarn install
   #   - run: yarn lint:docs
@@ -69,8 +69,8 @@ jobs:
   #   runs-on: ubuntu-latest
 
   #   steps:
-  #   - uses: actions/checkout@v2
-  #   - uses: volta-cli/action@v1
+  #   - uses: actions/checkout@v4
+  #   - uses: volta-cli/action@v4
 
   #   - run: yarn install
   #   - run: yarn lint:docs-js
@@ -80,9 +80,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
       with:
         fetch-depth: 0
 
-    - uses: volta-cli/action@v1
+    - uses: volta-cli/action@v4
     - uses: wagoid/commitlint-github-action@v4.1.9
