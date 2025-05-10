@@ -4,6 +4,20 @@ const getChannelURL = require('ember-source-channel-url');
 const { embroiderSafe, embroiderOptimized } = require('@embroider/test-setup');
 
 module.exports = async function () {
+  const ember3Deps = {
+    'ember-maybe-import-regenerator': '^1.0.0',
+    'ember-qunit': '^5.1.5',
+    '@ember/test-waiters': '^2.4.5',
+    '@ember/test-helpers': '^2.6.0',
+    'ember-resolver': '^8.0.3',
+    // Compat Upgrades
+    'ember-cli': '~4.12.0',
+    'ember-auto-import': '^2.10.0',
+    // Not needed
+    'ember-fetch': null,
+    'ember-cli-app-version': null,
+  };
+
   return {
     usePnpm: true,
     scenarios: [
@@ -11,6 +25,7 @@ module.exports = async function () {
         name: 'ember-3.25',
         npm: {
           devDependencies: {
+            ...ember3Deps,
             'ember-source': '~3.25.0',
           },
         },
@@ -18,6 +33,7 @@ module.exports = async function () {
       {
         name: 'ember-3.28-lts',
         npm: {
+          ...ember3Deps,
           devDependencies: {
             'ember-source': '~3.28.0',
           },

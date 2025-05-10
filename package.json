@@ -73,7 +73,7 @@
     "ember-cli-htmlbars": "^6.0.1",
     "ember-cli-inject-live-reload": "^2.1.0",
     "ember-disable-prototype-extensions": "^1.1.3",
-    "ember-load-initializers": "^2.1.2",
+    "ember-load-initializers": "^3.0.1",
     "ember-page-title": "^7.0.0",
     "ember-qunit": "^9.0.0",
     "ember-resolver": "^8.0.3",
@@ -99,9 +99,6 @@
     "release-plan": "^0.16.0",
     "typescript": "^4.6.3",
     "webpack": "^5.68.0"
-  },
-  "peerDependencies": {
-    "ember-source": "^3.25.0 || >=4.0.0"
   },
   "packageManager": "pnpm@10.10.0",
   "engines": {
